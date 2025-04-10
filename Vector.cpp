@@ -121,7 +121,7 @@ void Vector::insert(const ValueType& value, size_t pos)
     }
     if (pos > _size)
     {
-        throw std::out_of_range("The index of the inserted element doesn't belong to [0, size]");
+        throw std::out_of_range("Invalid position");
     }
     for (size_t i = _size; i > pos; i--)
     {
@@ -134,7 +134,7 @@ void Vector::insert(const ValueType* values, size_t size, size_t pos)
 {
     if (pos > _size)
     {
-        throw std::out_of_range("The index of the inserted array doesn't belong to [0, size]");
+        throw std::out_of_range("Invalid position");
     }
     while (_capacity <= (_size + size))
     {
@@ -154,7 +154,7 @@ void Vector::insert(const Vector& vector, size_t pos)
 {
     if (pos > _size)
     {
-        throw std::out_of_range("The index of the inserted vector doesn't belong to [0, size]");
+        throw std::out_of_range("Invalid position");
     }
     while (_capacity <= (_size + vector._size))
     {
