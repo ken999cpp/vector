@@ -5,7 +5,7 @@ Vector::Vector(const ValueType* rawArray, const size_t size, float coef)
 {
     if (coef <= 1.0f)
     {
-        throw std::invalid_argument("Multiplicative coef must be >= 1.0");
+        throw std::invalid_argument("Multiplicative coef must be > 1.0");
     }
     if (size > 0 && rawArray == nullptr)
     {
