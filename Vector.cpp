@@ -301,6 +301,10 @@ void Vector::shrinkToFit()
     _capacity = _size;
     newdata = nullptr;
 }
+bool Vector::empty() const
+{
+    return _size == 0;
+}
 Vector::Iterator::Iterator(ValueType* ptr): _ptr(ptr) {}
 ValueType& Vector::Iterator::operator*()
 {

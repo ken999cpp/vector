@@ -88,6 +88,7 @@ public:
     void reserve(size_t capacity);
 	//! Уменьшить capacity до size
     void shrinkToFit();
+    bool empty() const;
 	
 	//! Класс, реализующий итератор
     class Iterator
