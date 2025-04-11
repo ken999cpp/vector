@@ -1,6 +1,7 @@
 #include "Vector.h"
 #include <cstring>
 #include <cmath>
+#include <stdexcept>
 Vector::Vector(const ValueType* rawArray, const size_t size, float coef)
 {
     if (coef <= 1.0f)
